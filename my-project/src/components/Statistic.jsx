@@ -12,11 +12,11 @@ export default function Statistic() {
             <h1 className="text-white text-center text-2xl mt-2">Designs</h1>
           </div>
           <div className="md:mx-auto">
-            <h1 className="text-white text-center text-5xl sm:mt-10">30+</h1>
+            <h1 className="text-white text-center text-5xl mt-10">30+</h1>
             <h1 className="text-white text-center text-2xl mt-2">Products</h1>
           </div>
           <div className="md:mx-auto">
-            <h1 className="text-white text-center text-5xl sm:mt-10">58+</h1>
+            <h1 className="text-white text-center text-5xl mt-10">58+</h1>
             <h1 className="text-white text-center text-2xl mt-2">
               Website Developments
             </h1>
