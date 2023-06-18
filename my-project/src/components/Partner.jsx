@@ -1,7 +1,7 @@
 export default function Partner() {
   return (
     <>
-      <div className="grid grid-cols-3 mt-10 mx-10 gap-5 md:mx-20 md:px-10 md:grid-cols-6 md:mt-36">
+      <div className="grid grid-cols-3 mt-10 mx-10 gap-5 md:mx-20 md:px-10 md:grid-cols-6 md:mt-24">
         <img
           src="../src/assets/partners/Rectangle 1902.svg"
           className="w-36 h-36  mx-auto"

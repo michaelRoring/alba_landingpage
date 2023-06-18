@@ -3,10 +3,10 @@ export default function Portfolio() {
     <>
       <div className="mt-20 mx-14">
         <h1 className="text-center text-slate-400">Portfolio</h1>
-        <h1 className=" text-slate-900 mt-8 font-bold text-4xl md:text-center drop-shadow-lg">
+        <h1 className=" text-black mt-8 font-bold text-4xl md:text-center drop-shadow-lg">
           The software that we built takes our client to the next level
         </h1>
-        <div className="md:grid md:grid-cols-3 md:gap-10 md:mx-20">
+        <div className="lg:grid lg:grid-cols-3 md:gap-10 md:mx-20">
           {/* first card */}
           <div className="border border-yellow-300 rounded-xl mt-10">
             <img src="../src/assets/portfolio.svg" className="mb-8 w-full" />
