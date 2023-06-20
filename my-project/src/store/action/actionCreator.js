@@ -25,3 +25,24 @@ export const login = payload => {
     }
   };
 };
+
+export const fetchEva = id => {
+  return async dispatch => {
+    try {
+      const res = await fetch(`${BASE_URL}/api/users/${id}`);
+
+      if (!res.ok) throw await res.text();
+
+      const response = await res.json();
+      console.log("response :", response);
+
+      dispatch({
+        type: "fetchEvaSuccess",
+        payload: response,
+      });
+      return response;
+    } catch (err) {
+      console.log(err);
+    }
+  };
+};
