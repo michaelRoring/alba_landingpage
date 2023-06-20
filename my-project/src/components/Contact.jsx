@@ -1,4 +1,13 @@
+import { useState } from "react";
+
 export default function Contact() {
+  const [image, setImage] = useState({
+    whatsapp:
+      "https://firebasestorage.googleapis.com/v0/b/alba-homepage.appspot.com/o/whatsapp.svg?alt=media&token=e4ad90e5-8bb5-47a8-a33f-e393b2960bbf",
+    logoAlba:
+      "https://firebasestorage.googleapis.com/v0/b/alba-homepage.appspot.com/o/alba-logo.png?alt=media&token=18ddbe32-e348-4154-a0d3-e041f5282ef6",
+  });
+
   return (
     <footer class="bg-white mx-4">
       <div class="mx-auto w-full max-w-screen-xl">
@@ -7,7 +16,7 @@ export default function Contact() {
             <ul class="text-gray-500 dark:text-gray-400 font-medium">
               <li class="mb-4">
                 <img
-                  src="../src/assets/alba-logo.png"
+                  src={image.logoAlba}
                   className="h-8 mr-3 lg:scale-150 lg:ml-5 lg:mb-8"
                   alt="Flowbite Logo"
                 />
@@ -104,10 +113,12 @@ export default function Contact() {
                 <span className="font-semibold">E:</span> info@albatech.id
               </div>
             </span>
-            <img
-              src="../src/assets/whatsapp.svg"
-              className="absolute right-2 lg:absolute lg:right-48"
-            />
+            <a href="#">
+              <img
+                src={image.whatsapp}
+                className="absolute right-2 lg:absolute lg:right-48 hover:drop-shadow-2xl "
+              />
+            </a>
           </div>
         </div>
         <hr />

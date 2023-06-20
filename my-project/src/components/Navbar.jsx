@@ -1,14 +1,16 @@
+import { useState } from "react";
+
 export default function Navbar() {
+  const [image, setImage] = useState({
+    logo: "https://firebasestorage.googleapis.com/v0/b/alba-homepage.appspot.com/o/alba-logo.png?alt=media&token=18ddbe32-e348-4154-a0d3-e041f5282ef6",
+  });
+
   return (
     <>
-      <nav className="bg-white dark:bg-gray-900 fixed sticky w-full z-20 top-0 left-0 border-b border-gray-200 ">
+      <nav className="bg-white dark:bg-gray-900 sticky z-20 top-0 left-0 border-b border-gray-200 lg:mx-20 lg:w-full md:w-full">
         <div className="flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="https://flowbite.com/" className="flex items-center">
-            <img
-              src="../src/assets/alba-logo.png"
-              className="h-8 mr-3"
-              alt="Flowbite Logo"
-            />
+            <img src={image.logo} className="h-8 mr-3" alt="Flowbite Logo" />
           </a>
           <div className="flex md:order-2">
             <button
@@ -42,7 +44,7 @@ export default function Navbar() {
               <li>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 lg:mt-3 md:mt-5"
                   aria-current="page"
                 >
                   Service
@@ -51,7 +53,7 @@ export default function Navbar() {
               <li>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 lg:mt-3 md:mt-5"
                 >
                   About
                 </a>
@@ -59,7 +61,7 @@ export default function Navbar() {
               <li>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 lg:mt-3 md:mt-5"
                 >
                   Portfolio
                 </a>
@@ -67,7 +69,7 @@ export default function Navbar() {
               <li>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 lg:mt-3 md:mt-5"
                 >
                   Blog
                 </a>
@@ -76,7 +78,7 @@ export default function Navbar() {
               <li>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 lg:mt-3 md:mt-5"
                 >
                   Carrer
                 </a>
@@ -84,7 +86,7 @@ export default function Navbar() {
               <li>
                 <button
                   type="button"
-                  className=" text-black bg-yellow-400 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-10 py-4 text-center mr-3 md:mr-0 lg:pb-4"
+                  className=" text-black bg-yellow-400 hover:bg-yellow-500 ease-in-out duration-300 hover:shadow-2xl focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-10 py-4 text-center mr-3 md:mr-0 lg:mb-2"
                 >
                   Contact Us
                 </button>

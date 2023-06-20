@@ -1,9 +1,14 @@
+import { useState } from "react";
+
 export default function Testimonial() {
+  const [image, setImage] = useState({
+    bg: "https://firebasestorage.googleapis.com/v0/b/alba-homepage.appspot.com/o/bg.svg?alt=media&token=17d49646-321b-4114-a986-387741f8ebc5",
+  });
   return (
     <>
       <div className="relative mt-36 mx-10 lg:mx-20 ">
         <span class="absolute   ">
-          <img src="../src/assets/bg.svg" />
+          <img src={image.bg} />
         </span>
         <h1 className="text-slate-500 text-center">Testimonials</h1>
         <h1 className="text-black font-bold text-3xl text-center lg:text-5xl lg:mx-96">
