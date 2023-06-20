@@ -1,4 +1,11 @@
+import { useState } from "react";
+
 export default function Portfolio() {
+  const [image, setImage] = useState({
+    portfolio:
+      "https://firebasestorage.googleapis.com/v0/b/alba-homepage.appspot.com/o/portfolio.svg?alt=media&token=ad5fb039-51e5-43fe-b653-63df0ccd36ae",
+  });
+
   return (
     <>
       <div className="mt-20 mx-14">
@@ -9,7 +16,7 @@ export default function Portfolio() {
         <div className="lg:grid lg:grid-cols-3 md:gap-10 md:mx-20">
           {/* first card */}
           <div className="border border-yellow-300 rounded-xl mt-10">
-            <img src="../src/assets/portfolio.svg" className="mb-8 w-full" />
+            <img src={image.portfolio} className="mb-8 w-full" />
             <div className="px-10">
               <h1 className=" text-slate-300 ">Mobile apps</h1>
               <h1 className=" text-yellow-400 text-2xl font-semibold mb-8 md:mb-4">
@@ -24,7 +31,7 @@ export default function Portfolio() {
 
           {/* second card */}
           <div className="border border-slate-300 rounded-xl mt-10">
-            <img src="../src/assets/portfolio.svg" className="mb-8 w-full" />
+            <img src={image.portfolio} className="mb-8 w-full" />
             <div className="px-10 md:mb-4">
               <h1 className=" text-slate-300 ">Website development</h1>
               <h1 className=" text-yellow-400 text-2xl font-semibold mb-8 md:mb-4">
@@ -40,7 +47,7 @@ export default function Portfolio() {
 
           {/* third card */}
           <div className="border border-slate-300 rounded-xl mt-10">
-            <img src="../src/assets/portfolio.svg" className="mb-8 w-full" />
+            <img src={image.portfolio} className="mb-8 w-full" />
             <div className="px-10 md:mb-4">
               <h1 className=" text-slate-300 ">Website development</h1>
               <h1 className=" text-yellow-400 text-2xl font-semibold mb-8 md:mb-4">
@@ -57,7 +64,7 @@ export default function Portfolio() {
         <div className="flex justify-center items-center mt-4 md:mt-10">
           <button
             type="button"
-            className="items-center text-black bg-yellow-400 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-10 py-4 text-center"
+            className="items-center text-black bg-yellow-400 hover:bg-yellow-500 ease-in-out duration-300 hover:shadow-xl focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-10 py-4 text-center"
           >
             Learn more
           </button>
