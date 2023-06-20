@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <>
       <div className="md:grid md:grid-cols-2 md:justify-start ">
-        <div className=" mt-12 md:mx-auto md:mt-12 md:ml-20 lg:ml-20 ml-8">
+        <div className=" mt-12 md:mx-auto md:mt-12 md:ml-20 lg:ml-20 ml-8 ">
           <h1 className="font-bold text-6xl md:text-6xl md:mb-8 drop-shadow-lg md:mt-12 lg:text-8xl ">
             Build or scale up
           </h1>
@@ -30,10 +30,10 @@ export default function Hero() {
             Book now
           </button>
         </div>
-        <div className="md:mr-40 md:pr-4 lg:relative">
+        <div className="md:mr-40 md:pr-4 ">
           <img
             src={image.hero}
-            className="mt-10 md:mt-24 md:ml-28 lg:scale-150 lg:ml-10 md:scale-150 "
+            className="mt-10 md:mt-24 md:ml-28 lg:ml-4 lg:scale-125  md:scale-150 "
           />
         </div>
       </div>
