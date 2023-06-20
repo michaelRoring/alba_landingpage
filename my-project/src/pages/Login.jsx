@@ -13,6 +13,10 @@ export default function Login() {
     password: "",
   });
 
+  const [image, setImage] = useState({
+    logo: "https://firebasestorage.googleapis.com/v0/b/alba-homepage.appspot.com/o/alba-logo.png?alt=media&token=18ddbe32-e348-4154-a0d3-e041f5282ef6",
+  });
+
   //   handle change
   const handleChange = e => {
     const { name, value } = e.target;
@@ -24,7 +28,7 @@ export default function Login() {
     try {
       e.preventDefault();
       const res = await dispatch(login(data));
-      console.log("res :", res);
+      // console.log("res :", res);
 
       if (!res) {
         toaster(`Invalid email / password`);
@@ -35,7 +39,7 @@ export default function Login() {
         navigate("/profile");
       }
     } catch (err) {
-      console.log(err); // log the error if login fails
+      console.log(err);
     }
   };
 
@@ -43,8 +47,8 @@ export default function Login() {
     <>
       {/* this should be navbar */}
 
-      <div className="mx-auto pt-52 w-4/12">
-        <h1 className="text-4xl mb-6">Login</h1>
+      <div className="mx-auto mt-52 w-4/12 border-4 p-20 border-slate-400 rounded-3xl px-8 bg-gradient-to-t from-slate-50 from-10% via-slate-100 via-30% to-yellow-50 to-90%">
+        <img src={image.logo} className="mb-14" />
         <form>
           <div class="relative z-0 w-full mb-6 group">
             {/* email login input */}
@@ -60,7 +64,7 @@ export default function Login() {
             />
             <label
               for="floating_email"
-              class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-yellow-600 peer-focus:dark:text-yellow-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-yellow-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
               Email address
             </label>
@@ -79,13 +83,13 @@ export default function Login() {
             />
             <label
               for="floating_password"
-              class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-yellow-600 peer-focus:dark:text-yellow-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-yellow-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
               Password
             </label>
           </div>
           <button
-            className="bg-yellow-500 px-5 py-2 rounded-xl text-white mt-4 hover:bg-yellow-700"
+            className="bg-yellow-400 px-5 py-2 rounded-xl text-white mt-4 hover:bg-yellow-500 ease-in-out duration-200 hover:shadow-2xl"
             onClick={e => handleLogin(e)}
           >
             Login

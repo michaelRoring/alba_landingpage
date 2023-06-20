@@ -11,7 +11,7 @@ const toaster = msg => {
     position: "right", // `left`, `center` or `right`
     stopOnFocus: true, // Prevents dismissing of toast on hover
     style: {
-      background: "linear-gradient(to right, #FBCEB1, #FFBF00)",
+      background: "linear-gradient(to right, #eab308, #ca8a04)",
     },
     onClick: function () {}, // Callback after click
   }).showToast();
