@@ -7,10 +7,14 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-white dark:bg-gray-900 sticky z-20 top-0 left-0 border-b border-gray-200 lg:mx-20 lg:w-full md:w-full">
+      <nav className="bg-white dark:bg-gray-900 sticky z-20 top-0 left-0 border-b border-gray-200 lg:mx-20 lg:w-11/12 md:w-full">
         <div className="flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="https://flowbite.com/" className="flex items-center">
-            <img src={image.logo} className="h-8 mr-3" alt="Flowbite Logo" />
+            <img
+              src={image.logo}
+              className="h-8 mr-3  lg:w-36 lg:h-16"
+              alt="Flowbite Logo"
+            />
           </a>
           <div className="flex md:order-2">
             <button
